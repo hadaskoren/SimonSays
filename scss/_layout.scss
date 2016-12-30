@@ -1,0 +1,96 @@
+
+.container {
+    width: 440px;
+    height: 440px;
+    margin: auto;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    position: relative;
+}
+
+.red {
+    border-radius:20px 320px 20px 20px;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    border-style: outset;
+    opacity: 1;
+    float: left;
+    background-image: url('../img/basketball.png');
+    /*position: absolute;
+    top: 61px;
+    left: 235px;*/
+
+}
+
+.blue {
+    @extend .red;
+    background-color: blue;
+    border-radius:20px 20px 20px 320px;
+    /*top: 280px;
+    left: 15px;*/
+}
+
+.green {
+    border-radius:320px 20px 20px 20px;
+    @extend .red;
+    background-color: green;
+    /*top: 60px;
+    left: 15px;*/
+}
+
+.yellow {
+    @extend .red;
+    background-color: yellow;
+    border-radius: 20px 20px 320px 20px;
+    /*top: 280px;
+    left: 235px;*/
+}
+
+.simon {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+}
+
+.note {
+  transition: all 1s;
+}
+
+.playing {
+    background: rgba(250, 250, 250, .9);
+    color: rgba(0, 0, 0, .9);
+  /*box-shadow: 5px 5px 5px 5px;*/
+}
+
+.clicked {
+   @extend .playing;
+   
+}
+
+.userMsg {
+    position: absolute;
+    top: 70px;
+    left: 48px;
+}
+
+.level {
+    color: grey;
+    margin-top: 45px;
+}
+
+.highestScore {
+    display: block;
+    width: 146px;
+    height: 50px;
+    margin: 0 auto;
+    color: black;
+    margin-top: 50px;
+
+}
